@@ -1,10 +1,10 @@
 export default function Resume () {
     return (
         <div>
-        <h1>J.L.Gerdes</h1>
+        <h1>Proficiencies</h1>
         <p>
-            This is just the beginning...
+            I can do things.
         </p>
       </div>
-    )
+    );
 }

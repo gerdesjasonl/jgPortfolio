@@ -1,15 +1,14 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App.jsx';
 import Home from './components/pages/Home.jsx'
-import ErrorPage from './components/pages/ErrorPage';
-import Contact from './components/pages/Contact';
-import About from './components/pages/About';
-import Portfolio from './components/pages/Portfolio';
-import Resume from './components/pages/Resume';
+import ErrorPage from './components/pages/ErrorPage.jsx';
+import Contact from './components/pages/Contact.jsx';
+import AboutMe from './components/pages/AboutMe.jsx';
+import Portfolio from './components/pages/Portfolio.jsx';
+import Resume from './components/pages/Resume.jsx';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
@@ -23,8 +22,8 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        index: '/About',
-        element: <About />,
+        path: '/AboutMe',
+        element: <AboutMe />,
       },
       {
         path: '/Portfolio',
