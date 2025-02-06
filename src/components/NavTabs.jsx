@@ -1,9 +1,15 @@
 import { Link, useLocation } from 'react-router-dom';
 const navStyle = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  position: 'fixed',
+  width: '100%',
+  top: 0,
+  left: 0,
   listStyleType: 'none',
   alignItems: 'center',
   paddingInlineStart: '0px',
-  display: 'inline-flex',
+  justifyContent: 'center'
 }
 
 const cardStyle = {

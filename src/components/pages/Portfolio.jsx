@@ -1,13 +1,58 @@
-export default function Portfolio () {
-    return (
-        <div>
-            <h1>Portfolio</h1>
-            <section class="box" id="project1">
-                <h2 class="projectName"></h2>
-                <a href="">link to live project</a>
-            </section>
+import Project from "./Project";
 
-        
-        </div>
+const Portfolio = () => {
+    return (
+      <section>
+        {projects.map((project, index) => (
+          <Project
+            key={index}
+            title={project.title}
+            description={project.description}
+            image={project.image}
+            link={project.link}
+          />
+        ))}
+      </section>
     );
-}
+  };
+
+const projects = [
+  {
+    title: "",
+    description: "",
+    image: "",
+    link: "",
+  },
+  {
+    title: "",
+    description: "",
+    image: "",
+    link: "",
+  },
+  {
+    title: "",
+    description: "",
+    image: "",
+    link: "",
+  },
+  {
+    title: "",
+    description: "",
+    image: "",
+    link: "",
+  },
+  {
+    title: "",
+    description: "",
+    image: "",
+    link: "",
+  },
+  {
+    title: "",
+    description: "",
+    image: "",
+    link: "",
+  },
+];
+
+export default Portfolio;
