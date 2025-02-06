@@ -1,21 +1,19 @@
-import { useState } from 'react'
+import { useState } from 'react';
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import { Outlet } from 'react-router-dom';
+import Nav from './components/NavTabs';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>    
-      <ul class="contact">
-        <li href="">EMAIL</li>
-        <li href="">WHATSAPP</li>
-        <li href="">SLACK</li>
-        <li href="">X</li>
-      </ul>
+    <>
+      <Nav />
+      <main className="mx-3">
+        <Outlet />  
+      </main>    
     </>
-  )
+  );
 }
 
 export default App

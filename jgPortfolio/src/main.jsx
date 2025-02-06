@@ -8,6 +8,7 @@ import Error from './pages/Error';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
