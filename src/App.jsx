@@ -8,11 +8,16 @@ import Nav from './components/NavTabs';
 function App() {
   return (
     <>
+      <header>
       <h1>J.L.Gerdes</h1>
       <Nav />
+      </header>
       <main className="mx-3">
         <Outlet />  
-      </main>    
+      </main> 
+      <footer>
+      
+      </footer>   
     </>
   );
 }
