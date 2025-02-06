@@ -1,27 +1,22 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import ReactDOM from 'react-dom/client'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import './index.css'
-import App from './App.jsx'
-import Error from './pages/Error';
-import Contact from './pages/Contact';
-import About from './pages/About';
-import Portfolio from './pages/Portfolio';
-import Resume from './pages/Resume';
-
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+import './index.css';
+import App from './App.jsx';
+import Home from './components/pages/Home.jsx'
+import ErrorPage from './components/pages/ErrorPage';
+import Contact from './components/pages/Contact';
+import About from './components/pages/About';
+import Portfolio from './components/pages/Portfolio';
+import Resume from './components/pages/Resume';
 
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -40,13 +35,12 @@ const router = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path: 'Resume',
+        path: '/Resume',
         element: <Resume />
       },
     ],
   },
 ]);
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <RouterProvider router={router} />
 );
