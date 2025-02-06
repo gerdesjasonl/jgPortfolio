@@ -1,5 +1,5 @@
 #root {
-  width: 100%;
+  width: 100vh;
   margin: 0 auto;
   padding: 0rem;
   text-align: center;
@@ -7,22 +7,22 @@
 
 /* Home Banner Styles here */
 header {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content:center;
+  margin-top: 20%;
   display: inline-block;
-  width: 100%;
+  width: 100vh;
 }
 
-header.h1 {
+.profileName {
+  margin-top: 20%;
   flex: 1;
   font-size: 90px;
-  width: 100px;
+  width: 100vh;
 }
 
 header.Nav {
+  margin-bottom: 10%;
   position: sticky;
-  display: inline-flex;
+  width: 100vh;
 }
 
 

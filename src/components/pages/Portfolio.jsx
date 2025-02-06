@@ -2,7 +2,7 @@ import Project from "./Project";
 
 const Portfolio = () => {
     return (
-      <section>
+      <section style={{marginTop: '20%'}}>
         {projects.map((project, index) => (
           <Project
             key={index}

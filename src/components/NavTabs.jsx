@@ -12,7 +12,8 @@ const navStyle = {
   justifyContent: 'center'
 }
 
-const cardStyle = {
+const linkStyle = {
+  fontSize: '45px',
   padding: '5px',
   margin: '5px',
   borderRadius: '5px'
@@ -23,27 +24,27 @@ function NavTabs() {
   
   return (
     <ul id="homeNav" style={navStyle}>
-      <li className="nav-item" style={cardStyle}>
+      <li className="nav-item" style={linkStyle}>
         <Link to="/"
         className={currentPage === '/' ? 'nav-link active' : 'nav=link'}
         >Home</Link>
       </li>
-      <li className="nav-item" style={cardStyle}>
+      <li className="nav-item" style={linkStyle}>
         <Link to="/AboutMe"
         className={currentPage === '/AboutMe' ? 'nav-link active' : 'nav=link'}
         >About</Link>
       </li>
-      <li className="nav-item" style={cardStyle}>
+      <li className="nav-item" style={linkStyle}>
         <Link to="/Portfolio"
         className={currentPage === '/Portfolio' ? 'nav-link active' : 'nav=link'}
         >Portfolio </Link>
       </li>      
-      <li className="nav-item" style={cardStyle}>
+      <li className="nav-item" style={linkStyle}>
         <Link to="/Contact"
         className={currentPage === '/Contact' ? 'nav-link active' : 'nav=link'}
         >Contact</Link>
       </li>
-      <li className="nav-item" style={cardStyle}>
+      <li className="nav-item" style={linkStyle}>
         <Link to="/Resume"
         className={currentPage === '/Resume' ? 'nav-link active' : 'nav=link'}
         >Resume</Link>
