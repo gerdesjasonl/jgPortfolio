@@ -10,7 +10,7 @@ export default function Contact() {
       // Getting the value and name of the input which triggered the change
       const { name, value } = e.target;
   
-      // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
+      // Ternary statement that will call either userNmame or userEmail based on what field the user is typing in
       return name === 'userName' ? setUserName(value) : setUserEmail(value);
     };
   
@@ -24,35 +24,51 @@ export default function Contact() {
       setUserEmail ('');
       setUserMessage('');
     };
-
+    const formStyle = {
+      display: 'flex',
+      flexDirection: 'column',
+      width: '80%',
+      margin: 'auto',
+    };
+    const inputStyleA = {
+      backgroundColor: 'white',
+      fontSize: 30,
+      padding: '10px',
+    };
+    const inputStyleB = {
+      backgroundColor: 'white',
+      fontSize: 30,
+      padding: '10px',
+      height: '150px',
+    }
   return (
       <div className="container text-center">
       <h1>
         Hello {userName}
       </h1>
-      <form className="form" onSubmit={handleFormSubmit}>
-        <input
+      <form className="form" onSubmit={handleFormSubmit} style={formStyle}>
+        <input style={inputStyleA}
           value={userName}
           name="userName"
           onChange={handleInputChange}
           type="text"
           placeholder="Name"
         />
-        <input
+        <input style={inputStyleA}
           value={userEmail}
           name="userEmail"
           onChange={handleInputChange}
           type="text"
           placeholder="Email"
         />
-        <input
+        <input style={inputStyleB}
           value={userMessage}
           name="userMessage"
           onChange={handleInputChange}
           type="text"
           placeholder="Message"
         />
-        <button type="submit">
+        <button type="submit" style={{backgroundColor: 'blue', color: 'white', fontSize: 20}}>
           Submit
         </button>
       </form>
