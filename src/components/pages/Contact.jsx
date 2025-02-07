@@ -5,7 +5,6 @@ export default function Contact() {
     const [userName, setUserName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
-    const [error, setError] = useState('');
   
     const handleInputChange = (e) => {
       // Getting the value and name of the input which triggered the change
@@ -27,8 +26,8 @@ export default function Contact() {
         setUserEmail ('');
         setUserMessage('');
       };
-      
     };
+
     const formStyle = {
       display: 'flex',
       flexDirection: 'column',

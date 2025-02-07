@@ -1,6 +1,7 @@
 #root {
   width: 100vh;
-  margin: 0 auto;
+  height: 100%;
+  margin: 1px;
   padding: 0rem;
   text-align: center;
 }
@@ -21,9 +22,40 @@ header {
 header.Nav {
   margin-top: -10%;
   margin-bottom: 10%;
-  position: sticky;
+  position: absolute;
   width: 100vh;
  
+}
+
+@media screen and (min-width: 768px) {
+  #root {
+    margin-top: 20%;
+    min-width: 768px;
+    width: 80%;
+    align-items: start;
+  }
+
+  header {
+    display:flex;
+    position: fixed;
+    margin: 0;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('/abstractGreenBackground.jpg');
+  }
+  
+  .profileName { 
+    margin-top: 5%;
+    margin-left: 5%;
+    flex: 0;
+    font-size: 45px;
+    width: 20%;
+    flex: 20%;
+    display: inline-block;
+    text-align: left;
+  }
 }
 
 
