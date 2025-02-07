@@ -13,7 +13,7 @@ const Project = ({ title, description, image, link }) => {
       <Card.Body>
         <Card.Title>{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
-        <a href={'https://www.google.com/'} target="_blank" rel="noopener noreferrer">
+        <a href={link} target="_blank" rel="noopener noreferrer">
         </a>
       </Card.Body>
     </Card>
