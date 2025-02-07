@@ -5,6 +5,7 @@ export default function Contact() {
     const [userName, setUserName] = useState('');
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
+    const [error, setError] = useState('');
   
     const handleInputChange = (e) => {
       // Getting the value and name of the input which triggered the change
@@ -17,12 +18,16 @@ export default function Contact() {
     const handleFormSubmit = (e) => {
       // Preventing the default behavior of the form submit (which is to refresh the page)
       e.preventDefault();
-  
-      // Alert the user their name, clear the inputs
-      alert(`Thank you ${userName}!`);
-      setUserName('');
-      setUserEmail ('');
-      setUserMessage('');
+      // This will check for email format.
+      if (!userEmail.includes("@")) {
+        alert("Invalid Email");
+      } else {
+        alert(`Thank you ${userName}!`);
+        setUserName('');
+        setUserEmail ('');
+        setUserMessage('');
+      };
+      
     };
     const formStyle = {
       display: 'flex',
@@ -32,11 +37,13 @@ export default function Contact() {
     };
     const inputStyleA = {
       backgroundColor: 'white',
+      color: 'black',
       fontSize: 30,
       padding: '10px',
     };
     const inputStyleB = {
       backgroundColor: 'white',
+      color: 'black',
       fontSize: 30,
       padding: '10px',
       height: '150px',
@@ -64,7 +71,8 @@ export default function Contact() {
         <input style={inputStyleB}
           value={userMessage}
           name="userMessage"
-          onChange={handleInputChange}
+          onChange={(e) => setUserMessage(e.target.value)}
+          required
           type="text"
           placeholder="Message"
         />

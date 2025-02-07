@@ -1,12 +1,9 @@
-import { useState } from 'react';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import Nav from './components/NavTabs';
 
-function App() {
-  return (
+function App () {
+    return (
     <>
       <header> 
       <h1 className= "profileName">J.L.Gerdes</h1>
@@ -19,7 +16,7 @@ function App() {
       
       </footer>   
     </>
-  );
-}
+    );
+  };
 
 export default App

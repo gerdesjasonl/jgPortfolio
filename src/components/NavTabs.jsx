@@ -4,19 +4,24 @@ const navStyle = {
   flexWrap: 'wrap',
   position: 'fixed',
   width: '100%',
+  margin: 0,
   top: 0,
   left: 0,
   listStyleType: 'none',
   alignItems: 'center',
   paddingInlineStart: '0px',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  backgroundImage: "url('/abstractGreenBackground.jpg')",
+  backgroundSize: 'cover',
+  backgroungPosition: 'center',
 }
 
 const linkStyle = {
   fontSize: '45px',
   padding: '5px',
   margin: '5px',
-  borderRadius: '5px'
+  borderRadius: '5px',
+  textShadow: '5px 5px white',
 }
 
 function NavTabs() {
