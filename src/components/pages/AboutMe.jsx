@@ -10,7 +10,7 @@ export default function AboutMe () {
       flexDirection: 'row',
       alignItems: 'center',
       width: '100%',
-      marginLeft: '10%',
+      marginLeft: '0%',
       marginTop: '-10%',
       padding: '20px',
       borderRadius: '12px',

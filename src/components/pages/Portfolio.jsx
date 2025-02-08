@@ -1,8 +1,22 @@
 import Project from "./Project";
+import { css } from "@emotion/react";
+import empTrack from "../../../public/employeeTrackerScreen.png";
+import readmeGen from "../../../public/employeeTrackerScreen.png";
+import vehicleBuild from "../../../public/employeeTrackerScreen.png";
+
+
+const portfolioStyle = css({
+  marginTop: '20%',
+"@media screen and (min-width: 768px)": {
+  display: 'grid',
+  gridTemplateColumns: '1fr 1fr',
+  gridTemplateRows: '1fr 1fr 1fr',
+}
+})
 
 const Portfolio = () => {
     return (
-      <section style={{marginTop: '20%'}}>
+      <section css={portfolioStyle}>
         {projects.map((project, index) => (
           <Project
             key={index}
@@ -18,27 +32,27 @@ const Portfolio = () => {
 
 const projects = [
   {
-    title: "",
+    title: "Employee Tracker",
     description: "",
-    image: "",
+    image: empTrack,
     link: "",
   },
   {
-    title: "",
+    title: "README Generator",
     description: "",
-    image: "",
+    image: readmeGen,
     link: "",
   },
   {
-    title: "",
+    title: "Vehicle Builder",
     description: "",
-    image: "",
+    image: vehicleBuild,
     link: "",
   },
   {
-    title: "",
+    title: "French Castles",
     description: "",
-    image: "",
+    image: '',
     link: "",
   },
   {

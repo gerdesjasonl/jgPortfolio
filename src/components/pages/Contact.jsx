@@ -31,6 +31,7 @@ export default function Contact() {
     const formStyle = {
       display: 'flex',
       flexDirection: 'column',
+      justifyContent: 'center',
       width: '80%',
       margin: 'auto',
     };

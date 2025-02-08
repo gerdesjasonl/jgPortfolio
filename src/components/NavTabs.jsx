@@ -27,14 +27,14 @@ const navStyle = css({
 })
 
 const linkStyle = css({
-  fontSize: '45px',
+  fontSize: '40px',
   padding: '5px',
   margin: '5px',
   borderRadius: '5px',
   textShadow: '5px 5px white',
   "@media (min-width: 768px)": {
-  fontSize: '25px',
-  textShadow: '1px 2px white'
+    fontSize: '40px',
+    textShadow: '1px 2px white'
   },
 })
 

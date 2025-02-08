@@ -1,8 +1,14 @@
 import Card from 'react-bootstrap/Card';
 
+// const CardStyle = css({
+//   display: 'flex', 
+//   justifyContent: 'center', 
+//   alignItems: 'center',
+// });
+
 const Project = ({ title, description, image, link }) => {
   return (
-    <Card style={{width: '100%', left: 0}}>
+    <Card css={{width: '100%', left: 0}}>
       <Card.Img
         src={image}
         alt={title}
