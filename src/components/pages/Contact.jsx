@@ -6,6 +6,15 @@ export default function Contact() {
     const [userEmail, setUserEmail] = useState('');
     const [userMessage, setUserMessage] = useState('');
   
+    const handleBlur = (e) => {
+      const { name, value } = e.target;
+      if (!value.trim()) {
+        setErrors((prevErrors) => ({ ...prevErrors, [name]: "This field is required" }));
+      } else {
+        setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+      }
+    };
+  
     const handleInputChange = (e) => {
       // Getting the value and name of the input which triggered the change
       const { name, value } = e.target;
@@ -59,6 +68,7 @@ export default function Contact() {
           value={userName}
           name="userName"
           onChange={handleInputChange}
+          onBlur={handleBlur}
           type="text"
           placeholder="Name"
         />
@@ -66,6 +76,7 @@ export default function Contact() {
           value={userEmail}
           name="userEmail"
           onChange={handleInputChange}
+          onBlur={handleBlur}
           type="text"
           placeholder="Email"
         />
@@ -73,6 +84,7 @@ export default function Contact() {
           value={userMessage}
           name="userMessage"
           onChange={(e) => setUserMessage(e.target.value)}
+          onBlur={handleBlur}
           required
           type="text"
           placeholder="Message"
@@ -83,4 +95,4 @@ export default function Contact() {
       </form>
     </div>
   );
-  }
+}
