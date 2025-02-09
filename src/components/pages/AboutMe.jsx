@@ -11,7 +11,7 @@ export default function AboutMe () {
       alignItems: 'center',
       width: '100%',
       marginLeft: '0%',
-      marginTop: '-10%',
+      marginTop: '0%',
       padding: '20px',
       borderRadius: '12px',
       boxShadow: '0px 4px 10px rgba(0,0,0,1)',

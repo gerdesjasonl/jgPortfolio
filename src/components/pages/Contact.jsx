@@ -32,6 +32,7 @@ export default function Contact() {
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
+      marginTop: '-5%',
       width: '80%',
       margin: 'auto',
     };
