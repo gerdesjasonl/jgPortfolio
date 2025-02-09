@@ -1,14 +1,17 @@
 import Card from 'react-bootstrap/Card';
+import { css }from '@emotion/react';
 
-// const CardStyle = css({
-//   display: 'flex', 
-//   justifyContent: 'center', 
-//   alignItems: 'center',
-// });
+const cardStyle = css({
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+  gap: "20px",
+  padding: "20px"
+});
 
 const Project = ({ title, description, image, link }) => {
   return (
-    <Card css={{width: '100%', left: 0}}>
+  <div>
+    <Card>
       <Card.Img
         src={image}
         alt={title}
@@ -23,7 +26,9 @@ const Project = ({ title, description, image, link }) => {
         </a>
       </Card.Body>
     </Card>
+    </div>
   );
 };
+
 
 export default Project;

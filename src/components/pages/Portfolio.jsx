@@ -1,23 +1,41 @@
 import Project from "./Project";
 import { css } from "@emotion/react";
 import empTrack from "../../../public/employeeTrackerScreen.png";
-import readmeGen from "../../../public/employeeTrackerScreen.png";
-import vehicleBuild from "../../../public/employeeTrackerScreen.png";
+import readmeGen from "../../../public/readmeGeneratorScreen.png";
+import vehicleBuild from "../../../public/vehicleBuilderScreen.png";
+import frenchCast from "../../../public/frenchCastleScreen.png";
 
+// const portfolioStyle = css({
+//   marginTop: '20%',
+// "@media screen and (min-width: 768px)": {
+//   gap: '20px',
+//   gridTemplateColumns: 'repeat(2, 1fr)',
+//   gridTemplateRows: 'auto',
+// }
+// });
 
-const portfolioStyle = css({
-  marginTop: '20%',
-"@media screen and (min-width: 768px)": {
-  display: 'grid',
-  gridTemplateColumns: '1fr 1fr',
-  gridTemplateRows: '1fr 1fr 1fr',
-}
-})
+const ProjectGrid = ({ projects }) => {
+  return (
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+      // gridTemplateColumns: "repeat(min(3, auto-fit), minmax(250px, 1fr))",
+      gap: "20%",
+      width: '80%',
+      padding: "20px"
+    }}>
+      {projects.map((project, index) => (
+        <Project key={index} {...project} />
+      ))}
+    </div>
+  );
+};
+
 
 const Portfolio = () => {
     return (
-      <section css={portfolioStyle}>
-        {projects.map((project, index) => (
+      <section>
+        {/* {projects.map((project, index) => (
           <Project
             key={index}
             title={project.title}
@@ -25,7 +43,8 @@ const Portfolio = () => {
             image={project.image}
             link={project.link}
           />
-        ))}
+        ))} */}
+        <ProjectGrid projects={projects} />
       </section>
     );
   };
@@ -52,7 +71,7 @@ const projects = [
   {
     title: "French Castles",
     description: "",
-    image: '',
+    image: frenchCast,
     link: "",
   },
   {
