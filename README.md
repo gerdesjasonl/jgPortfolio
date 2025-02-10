@@ -22,7 +22,7 @@
     <h3 style="background-color: black;text-align: center;color:azure;" id="installation">Installation Instructions</h3>
     <p id="installEntry">This application is deployed live at the following site, please click here: <a href = "https://jlgerdesportfolio.netlify.app">Deployed Application</a></p>
     <h3 style="background-color: black;text-align: center;color:azure;" id="usage">Usage Information</h3>
-    <p id="usageEntry">User can navigate this application utilizing the navigation links in the header of the page. Application is optimized to accomadate moobile platforms.</p>
+    <p id="usageEntry">User can navigate this application utilizing the navigation links in the header of the page. Application is optimized to accomadate mobile platforms.</p>
     <h3 style="background-color: black;text-align: center;color:azure;" id="license">License</h3>
     <p id="licenseEntry">This project is licensed under the terms of the MIT License</p>
     <h3 style="background-color: black;text-align: center;color:azure;" id="contribGuide">Contribution Guidelines</h3>
