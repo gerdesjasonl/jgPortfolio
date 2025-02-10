@@ -9,8 +9,9 @@ export default function AboutMe () {
       "@media screen and (min-width: 768px)": {
       flexDirection: 'row',
       alignItems: 'center',
-      width: '100%',
-      marginLeft: '0%',
+      width: '80%',
+      marginLeft: '10%',
+      marginRight: '-10%',
       marginTop: '0%',
       padding: '20px',
       borderRadius: '12px',
@@ -55,13 +56,27 @@ export default function AboutMe () {
         marginLeft: '60%'
       }
     });
+
+    const aboutPStyle = css({
+      fontSize: '50',
+      textAlign: 'center',
+      width: '100%',
+      "@media screen and (min-width: 768px)": {
+        width: '75%',
+        textAlign: 'left',
+      }
+    })
     
     return (
       <div css={aboutMeDivStyle}>
         <img src="../GerdesJason.jpg" css={profilePicStyle}></img>
         <div css={containerStyle}>
           <h1 css={aboutH1Style}>:::About Me:::</h1>
-          <p style={{fontSize: 50, textAlign: 'left', width: '75%'}}>Fuzzy Wuzzy was a bear but Fuzzy Wuzzy had no hair. Fuzzy Wuzzy wasn't very fuzzy was he?</p> 
+          <p css={aboutPStyle} style={{fontWeight: 'bolder'}}>I am an experienced educator, researcher, and software developer with a diverse professional background spanning academia, retail and restaurant management, and digital curriculum design.</p>
+
+          <p css={aboutPStyle}>I have lectured university courses on medical anthropology and the political history of diversity in the United States, bringing complex social and historical concepts to life for students. My expertise extends to advanced social science research, pedagogy, and curriculum design, with a strong focus on archive management and data visualization. Beyond academia, I have honed leadership and operational skills through years of managing retail stores and restaurants, gaining invaluable experience in team management, customer engagement, and business strategy. My transition into software development stems from a passion for creating innovative, data-driven educational tools. By leveraging my background in research and pedagogy, I aim to design digital curricula that enhance learning experiences through interactive and accessible technology.</p> 
+          
+          <p css={aboutPStyle} style={{fontWeight: 'bolder'}}>With a unique blend of analytical rigor, technical proficiency, and real-world management experience, I am committed to shaping the future of education through technology.</p> 
         </div>
       </div>
     );

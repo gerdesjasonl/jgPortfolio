@@ -43,14 +43,14 @@ function NavTabs() {
   
   return (
     <ul id="homeNav" css={navStyle}>
-      <li className="nav-item" css={linkStyle}>
+      {/* <li className="nav-item" css={linkStyle}>
         <Link to="/"
         className={currentPage === '/' ? 'nav-link active' : 'nav=link'}
         >Home</Link>
-      </li>
+      </li> */}
       <li className="nav-item" css={linkStyle}>
-        <Link to="/AboutMe"
-        className={currentPage === '/AboutMe' ? 'nav-link active' : 'nav=link'}
+        <Link to="/"
+        className={currentPage === '/' ? 'nav-link active' : 'nav=link'}
         >About</Link>
       </li>
       <li className="nav-item" css={linkStyle}>
